@@ -1,5 +1,5 @@
+import os
 import cherrypy
-import fileinput
 
 class Music(object):
     def index(self):
@@ -7,4 +7,14 @@ class Music(object):
     index.exposed = True
 
 if __name__ == "__main__":
-    cherrypy.quickstart(Music())
+    conf = {
+        '/': {
+            'tools.sessions.on': True,
+            'tools.staticdir.root': os.path.abspath(os.getcwd())
+        },
+        '/static': {
+            'tools.staticdir.on': True,
+            'tools.staticdir.dir': './public'
+        }
+    }
+    cherrypy.quickstart(Music(),'',conf)
