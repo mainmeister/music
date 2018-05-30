@@ -2,23 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Music V1.0</title>
-    <link rel="stylesheet" type="text/css" href="/static/main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>    <link rel="stylesheet" type="text/css" href="/static/main.css">
     <script src="/static/main.js" type="application/ecmascript"></script>
 </head>
 <body>
-    <h1>Music Player</h1>
-    <h2>
-        <label id="mmartist" class="clickable" onclick="mainmenu(mmtype.artist)">Artist</label>&nbsp;
-        <label id="mmalbum" class="clickable" onclick="mainmenu(mmtype.album)">Album</label>&nbsp;
-        <label id="mmsong" class="clickable" onclick="mainmenu(mmtype.song)">Song</label>&nbsp;
-        <label id="mmgenre" class="clickable" onclick="mainmenu(mmtype.genre)">Genre</label>
-    </h2>
-    <div id="main"></div>
-    <div id="artist"></div>
-    <div id="album"></div>
-    <div id="song"></div>
-    <div id="genre"></div>
-    <div id="playlist"></div>
+    <div class="container">
+        <h1>Music Player</h1>
+        <h2>
+            <label id="mmartist" class="clickable" onclick="mainmenu(mmtype.artist)">Artist</label>&nbsp;
+            <label id="mmalbum" class="clickable" onclick="mainmenu(mmtype.album)">Album</label>&nbsp;
+            <label id="mmsong" class="clickable" onclick="mainmenu(mmtype.song)">Song</label>&nbsp;
+            <label id="mmgenre" class="clickable" onclick="mainmenu(mmtype.genre)">Genre</label>
+        </h2>
+        <div id="main"></div>
+        <div id="artist"></div>
+        <div id="album"></div>
+        <div id="song"></div>
+        <div id="genre"></div>
+        <div id="playlist"></div>
+    </div>
 </body>
 </html>
