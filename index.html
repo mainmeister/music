@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,13 +21,13 @@
         <link rel="stylesheet" type="text/css" href="/static/main.css">
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="app">
             <h1>Music Player</h1>
             <h2>
-                <label id="mmartist" class="clickable" onclick="mainmenu(mmtype.artist)">Artist</label>&nbsp;
-                <label id="mmalbum" class="clickable" onclick="mainmenu(mmtype.album)">Album</label>&nbsp;
-                <label id="mmsong" class="clickable" onclick="mainmenu(mmtype.song)">Song</label>&nbsp;
-                <label id="mmgenre" class="clickable" onclick="mainmenu(mmtype.genre)">Genre</label>
+                <label id="mmartist" class="clickable" v-on:click="mainmenu(this.mmtype.artist)">Artist</label>&nbsp;
+                <label id="mmalbum" class="clickable" v-on:click="mainmenu(this.mmtype.album)">Album</label>&nbsp;
+                <label id="mmsong" class="clickable" v-on:click="mainmenu(this.mmtype.song)">Song</label>&nbsp;
+                <label id="mmgenre" class="clickable" v-on:click="mainmenu(this.mmtype.genre)">Genre</label>
             </h2>
             <div id="main"></div>
             <div id="artist"></div>
